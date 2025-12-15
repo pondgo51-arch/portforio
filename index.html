@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+
+    <!-- ===== CSS ===== -->
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00f2fe;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #4facfe;
+        }
+
+        .about img {
+            width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: auto;
+        }
+
+        .about p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            background: #4facfe;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .project button:hover {
+            background: #00c6ff;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>John Doe</h1>
+        <p>Web Developer | Student</p>
+    </header>
+
+    <nav>
+        <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#skills">ทักษะ</a>
+        <a href="#projects">ผลงาน</a>
+        <a href="#contact">ติดต่อ</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>เกี่ยวกับฉัน</h2>
+        <img src="https://via.placeholder.com/150" alt="Profile">
+        <p>
+            สวัสดีครับ ผมเป็นนักพัฒนาเว็บไซต์ที่สนใจด้าน HTML, CSS และ JavaScript  
+            กำลังพัฒนาทักษะเพื่อเป็น Web Developer มืออาชีพ
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>ทักษะ</h2>
+        <div class="skills">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Responsive Design</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>ผลงาน</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>เว็บไซต์แนะนำตัวแบบ Responsive</p>
+                <button onclick="showAlert('Project 1')">ดูรายละเอียด</button>
+            </div>
+
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>ระบบ To-do List ด้วย JavaScript</p>
+                <button onclick="showAlert('Project 2')">ดูรายละเอียด</button>
+            </div>
+
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Landing Page สินค้า</p>
+                <button onclick="showAlert('Project 3')">ดูรายละเอียด</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>ติดต่อ</h2>
+        <p style="text-align:center;">
+            Email: johndoe@email.com <br>
+            Tel: 080-000-0000
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2025 John Doe Portfolio</p>
+    </footer>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        function showAlert(projectName) {
+            alert("คุณกำลังดูรายละเอียดของ " + projectName);
+        }
+    </script>
+
+</body>
+</html>
